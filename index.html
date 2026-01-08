@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    
+<!-- navbar     -->
+<section class="w-full justify-between px-10 items-center flex h-20 shadow-md">
+    <div class="w-[20vw] md:w-[10%] lg:w-[10%] flex justify-center items-center bg-white">
+    <img class="w-30 h-fit" src="./assets/Layout/Brand/logo-colored.png" alt="" srcset="">
+    </div>
+
+    <div class="w-[50%]  lg:w-[45%] h-10 hidden md:flex rounded-md border-2 border-[#127FFF]">
+    <div class="w-[55%] md:flex hidden h-full border-r-2 border-[#127FFF] rounded-s-md ">
+        <input class="w-full  text-base px-5 h-full border-none outline-none active:no-underline  " type="text" placeholder="search">
+    </div>
+<!-- Category -->
+    <div class="lg:w-[25%] hidden lg:flex w-0 text-base">
+    <button class="w-full h-full  border-r-2 border-[#127FFF] outline-none px-2 flex justify-between items-center">
+    Category
+    <span class="px-2"><i class="fa-solid fa-angle-down"></i></span>
+    </button>
+
+    <ul class="w-full hidden bg-white border border-[#127FFF] rounded-md shadow-md mt-1">
+    <li class="px-3 py-2 hover:bg-black shadow-sm text-sm hover:text-white cursor-pointer">
+        gvsfv
+    </li>
+    <li class="px-3 py-2 hover:bg-black shadow-sm text-sm hover:text-white cursor-pointer">
+        gvsfv
+    </li>
+    <li class="px-3 py-2 hover:bg-black shadow-sm text-sm hover:text-white cursor-pointer">
+        gvsfv
+    </li>
+    </ul>
+    </div>
+<!-- Category -->
+    <div class="w-[50%] lg:w-[30%] flex bg-[#127FFF] justify-center items-center mx-auto">
+      <a href="" class="w-full h-fit text-white text-lg px-10 ">search</a>
+    </div>
+    </div>
+
+    <div class="w-[25%] lg:w-[20%] h-full justify-between items-center hidden md:flex ">
+    <div class="flex flex-col justify-center items-center">
+        <i class="fa-solid text-lg  fa-user text-gray-500"></i>
+        <p class="text-base  mt-1 font-thin text-gray-500">Profile</p>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+        <i class="fa-solid text-lg fa-message text-gray-500"></i>
+        <p class="text-base  mt-1 font-thin text-gray-500">Message</p>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+        <i class="fa-solid text-lg  fa-heart text-gray-500"></i>
+        <p class="text-base mt-1  font-thin text-gray-500">Order</p>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+       <i class="fa-solid text-lg fa-cart-shopping text-gray-500"></i>
+        <p class="text-base  mt-1 font-thin text-gray-500">Cart</p>
+    </div>
+    </div>
+
+    <!-- menu toggle -->
+    <div class="flex md:hidden">
+     <i class="fa-solid text-xl sm:text-2xl fa-bars"></i>
+    </div>
+
+
+</section>
+<!-- navbar     -->
+
+<!-- top navbar   -->
+<div class="bg-white shadow-md">
+  <div class="w-full  flex justify-between items-center py-3 px-14">
+    <div class="hidden md:flex flex-wrap gap-6 items-center">
+      <span class="font-semibold">☰ All category</span>
+      <span>Hot offers</span>
+      <span>Gift boxes</span>
+      <span>Projects</span>
+      <span>Menu item</span>
+      <span>Help <i class="fa-solid fa-angle-down"></i></span>
+    </div>
+
+    <div class="hidden lg:flex gap-4">
+      <span>English, USD <i class="fa-solid fa-angle-down"></i></span>
+    <div class="hidden lg:flex gap-2 justify-center items-center">
+        <p>Ship to</p> 
+        <img class="w-4 h-3" src="./assets/Layout1/Image/flags/AE@2x.png" alt="" srcset="">
+        <span><i class="fa-solid fa-angle-down"></i></span>
+    </div>
+
+    </div>
+  </div>
+</div>
+<!-- top navbar   -->
+
+<!-- HERO SECTION -->
+<div class="w-full px-4 sm:px-12 lg:px-16 mt-4 lg:flex-row flex flex-col gap-4">
+
+  <div class=" bg-teal-200 w-full lg:w-[70%] h-80 rounded-md ">
+
+     <img class="w-full h-full" src="./assets/Image/backgrounds/Banner-board-800x420 2.png"/>
+     <div class="relative text-start bottom-72 flex-col flex justify-center ml-4 sm:ml-20 w-[70%] sm:w-[50%]">
+         <h2 class="text-xl">Latest trending</h2>
+         <h1 class="text-3xl font-bold mt-1">Electronic items</h1>
+         <button class="mt-4 w-full sm:w-[50%] bg-white px-4 py-2 hover:bg-black hover:text-white rounded shadow">
+           Learn more
+         </button>
+     </div>
+  </div>
+
+  <!-- RIGHT BOXES -->
+  <div class="w-full gap-4 justify-center  lg:justify-normal  lg:w-[30%] flex flex-col md:flex-row lg:flex-col">
+
+    <div class="bg-blue-50 shadow-sm rounded-md p-3">
+     
+     <div class="flex gap-6 mb-4">
+         <div class="w-14 h-14 shadow-md rounded-full bg-blue-200 flex justify-center items-center">
+            <i class="fa-solid text-2xl fa-user"></i>
+         </div>
+
+         <div class="flex flex-col">
+             <p class="font-semibold">Hi, user</p>
+             <p class="font-semibold mb-2">lets Get started</p>
+         </div>
+    </div>   
+
+        <button class="w-full bg-blue-500 text-white py-1 rounded mb-2">
+          Join now
+        </button>
+      <button class="w-full border py-1 rounded">
+        Log in
+      </button>
+    </div>
+
+    <div class="bg-orange-400  text-white p-3 rounded-md">
+      Get US $10 off <br> with a new supplier
+    </div>
+
+    <div class="bg-teal-400 text-white p-3 rounded-md">
+      Send quotes with supplier preferences
+    </div>
+
+  </div>
+</div>
+
+<!-- DEALS SECTION -->
+<div class="w-full h-fit lg:h-52 flex flex-col lg:flex-row px-4 sm:px-16 mt-10 bg-white  rounded-md">
+
+  <div class="w-full lg:w-[20%] shadow  flex p-8 flex-col gap-8">
+    <div>
+      <h3 class="text-lg font-semibold">Deals and offers</h3>
+      <p class="text-sm text-gray-500">Hygiene equipments</p>
+    </div>
+    <div class="flex gap-2 text-center text-xs">
+      <div class="bg-gray-200 px-2 py-1 rounded">04<br>Days</div>
+      <div class="bg-gray-200 px-2 py-1 rounded">13<br>Hour</div>
+      <div class="bg-gray-200 px-2 py-1 rounded">34<br>Min</div>
+      <div class="bg-gray-200 px-2 py-1 rounded">56<br>Sec</div>
+    </div>
+  </div>
+
+  <div class="w-full lg:w-[80%] mt-10 lg:mt-0 flex md:flex-row flex-col shadow-sm  text-center">
+    <div  class="flex-1 justify-center items-center flex flex-col">
+      <img src="./assets/Image/tech/image 23.png">
+      <p class="mt-2">Mobile Phone</p>
+      <span class="text-red-500">-25%</span>
+    </div>
+    <div class="flex-1 shadow-sm justify-center items-center flex flex-col">
+      <img src="./assets/Image/tech/image 29.png">
+      <p class="mt-2">headphones</p>
+      <span class="text-red-500">-15%</span>
+    </div>
+    <div class="flex-1 shadow-sm justify-center items-center flex flex-col">
+      <img class="w-32" src="./assets/Image/tech/image 32.png">
+      <p class="mt-2">Tablet</p>
+      <span class="text-red-500">-40%</span>
+    </div>
+    <div class="flex-1 shadow-sm justify-center items-center flex flex-col">
+      <img class="w-32" src="./assets/Image/tech/image 33.png">
+      <p class="mt-2">Iphones</p>
+      <span class="text-red-500">-25%</span>
+    </div>
+    <div class="flex-1 shadow-sm justify-center items-center flex flex-col">
+      <img src="./assets/Image/tech/image 34.png">
+      <p class="mt-2">laptops</p>
+      <span class="text-red-500">-25%</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- Products -->
+
+
+  <!-- Home & Outdoor -->
+  <div class="bg-white w-full h-fit lg:h-72 rounded-lg px-4 sm:px-16 flex flex-col lg:flex-row mt-10 gap-4">
+    
+
+    <div class="w-full h-40 lg:h-full  lg:w-96 rounded-lg p-4 ">
+        <img src="./assets/Image/backgrounds/Group 969.png"
+           class="w-full h-40 lg:h-full object-fill rounded-lg " />
+
+      <div class="relative w-[80%]  bottom-35 lg:bottom-52 px-10 flex flex-col justify-start ">
+        <h2 class="text-xl font-semibold mb-2">Home and outdoor</h2>
+        <button class="w-30 md:w-60  bg-white px-4 py-2 rounded shadow text-sm font-medium">
+          Source now
+        </button>
+      </div>
+      
+    </div>
+
+    <!-- Products -->
+    <div class="w-full h-fit sm:h-full sm:px-0 px-4 ">
+      <!-- Card -->
+    <div class="w-full h-[40%] flex flex-col sm:flex-row gap-4 mt-4">
+      <div class="w-full sm:w-[30%] hover:scale-105 hover:shadow-xl hover:border-none flex  flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Soft chairs</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/interior/1.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      <div class="w-full sm:w-[30%] hover:scale-105 hover:shadow-xl hover:border-none flex  flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Pot</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/interior/3.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      <div class="w-full sm:w-[30%] hover:scale-105 hover:shadow-xl hover:border-none flex  flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Lamp</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/interior/6.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      <div class="w-full sm:w-[30%] hover:scale-105 hover:shadow-xl hover:border-none flex  flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Juicer</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/interior/9.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      </div>
+
+      <!-- Card -->
+      <div class="w-full h-[40%] flex flex-col sm:flex-row gap-4 mt-4">
+ <div class="w-full sm:w-[30%] flex hover:scale-105 hover:shadow-xl hover:border-none flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">plant</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/interior/image 89.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      <div class="w-full sm:w-[30%] hover:scale-105 hover:shadow-xl hover:border-none flex  flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Matress</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/interior/image 93.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      <div class="w-full sm:w-[30%] hover:scale-105 hover:shadow-xl hover:border-none flex  flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Pot</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Layout/alibaba/Image/interior/image 90.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      <div class="w-full sm:w-[30%] hover:scale-105 hover:shadow-xl hover:border-none flex  flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Soft chairs</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/interior/1.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      </div>
+     
+    </div>
+  </div>
+
+
+  <!-- Consumer Electronics -->
+ <div class="bg-white w-full h-fit lg:h-72 rounded-lg px-4 sm:px-16 flex flex-col lg:flex-row mt-10 gap-4">
+    
+
+    <div class="w-full h-40 lg:h-full  lg:w-96 rounded-lg p-4   ">
+        <img src="./assets/Image/backgrounds/image 98.png"
+           class="w-full h-40 lg:h-full object-fill rounded-lg " />
+
+      <div class="relative w-[80%] bottom-35 lg:bottom-52 px-10 flex flex-col justify-start ">
+        <h2 class="text-xl font-semibold mb-2">Consumer electronics and gadgets</h2>
+        <button class="w-30 md:w-60  bg-white px-4 py-2 rounded shadow text-sm font-medium">
+          Source now
+        </button>
+      </div>
+      
+    </div>
+
+    <!-- Products -->
+    <div class="w-full h-fit sm:h-full  ">
+      <!-- Card -->
+      <div class="w-full h-[40%] flex flex-col sm:flex-row gap-4 mt-4">
+     <div class="w-full sm:w-[30%] hover:scale-105 hover:shadow-xl hover:border-none  flex flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Camera</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/tech/6.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      <div class="w-full sm:w-[30%] hover:scale-105 hover:shadow-xl hover:border-none  flex flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Watch</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/tech/8.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      <div class="w-full sm:w-[30%]  hover:scale-105 hover:shadow-xl hover:border-none flex flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Phone</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/tech/image 23.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      <div class="w-full sm:w-[30%] hover:scale-105 hover:shadow-xl hover:border-none  flex flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Headphones</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/tech/image 29.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      </div>
+
+      <!-- Card -->
+      <div class="w-full h-[40%] flex flex-col sm:flex-row gap-4 mt-4">
+      <div class="w-full sm:w-[30%] hover:scale-105 hover:shadow-xl hover:border-none flex flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Tablet</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/tech/image 32.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      <div class="w-full sm:w-[30%]  hover:scale-105 hover:shadow-xl hover:border-none flex flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Iphone</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/tech/image 33.png "
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      <div class="w-full sm:w-[30%] hover:scale-105 hover:shadow-xl hover:border-none  flex flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Laptop</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/tech/image 34.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      <div class="w-full sm:w-[30%]  hover:scale-105 hover:shadow-xl hover:border-none flex flex-row sm:flex-col xl:flex-row justify-between border rounded-lg p-3 ">
+        <div>
+            <p class="text-base font-semibold">Electric Juicer</p>
+            <p class="text-sm text-gray-500">From USD 19</p>
+        </div>
+        <img src="./assets/Image/tech/image 85.png"
+             class="h-12 w-20 xl:w-30 xl:h-18 mt-2">
+      </div>
+      </div>
+     
+    </div>
+  </div>
+
+
+  <!-- Inquiry Section -->
+  <div class="w-full h-full mt-10 px-4 sm:px-14">
+    <div class="w-full h-80 md:h-96 ">
+    <img class="w-full h-[50vh] md:h-[100vh] lg:h-[100vh]" src="./assets/Image/backgrounds/Group 982.png" alt="" srcset="">
+
+     <div class="rounded-lg relative mt-0 sm:mt-10 lg:mt-0 bottom-[50vh] md:bottom-[100vh] lg:bottom-[80vh]  p-4 flex-col flex lg:flex-row gap-6 text-white"> 
+       <div class="flex-1  ">
+         <h2 class="text-3xl font-bold mb-2">
+           An easy way to send requests to all suppliers
+         </h2>
+         <p class="text-blue-100">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </p>
+       </div>
+   
+       <div class="md:flex-1 hidden md:flex md:h-[80vh] lg:h-fit  bg-white rounded-lg p-4 md:p-6 text-gray-800">
+          <div class="w-full h-fit">
+          <h3 class="text-sm md:text-base font-semibold mb-3">Send quote to suppliers</h3>
+    
+          <input type="text" placeholder="What item you need?"
+                  class="w-full border rounded p-2 mb-3">
+    
+          <textarea placeholder="Type more details"
+                    class="w-full border rounded p-2 mb-3"></textarea>
+    
+          <div class="flex flex-col md:flex-row gap-3 mb-4">
+            <input type="number" placeholder="Quantity"
+                    class="w-full border rounded p-2">
+            <select class="border rounded p-2">
+              <option>Pcs</option>
+            </select>
+          </div>
+    
+          <button class="w-full bg-blue-600 text-white py-2 rounded">
+            Send inquiry
+          </button>
+          </div>
+        </div>
+
+      <button class="justify-center items-center flex w-32 md:hidden  bg-blue-600 text-white py-2 rounded">
+            Send inquiry
+      </button>
+      </div> 
+    </div>
+     
+  </div>
+
+
+  <!-- Recommended Items -->
+  <section class="w-full h-full mt-0 md:mt-70  px-4 sm:px-16">
+    <h2 class="text-xl font-semibold mb-4">Recommended items</h2>
+
+    <div class="grid xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 gap-4">
+      <!-- Item -->
+      <div class="bg-white flex hover:scale-105 hover:shadow-xl hover:border-none justify-center flex-col gap-8 shadow-sm rounded-lg p-4 text-center">
+        <div class="w-full h-44">
+          <img src="./assets/Layout/alibaba/Image/cloth/2 1.png" class="mx-auto w-[80%] h-[80%] mb-3">
+
+        </div>
+        <div>
+          <p class="font-semibold">$10.30</p>
+          <p class="text-sm text-gray-500">Brown Leather Jacket</p>
+        </div>
+      </div>
+
+      <div class="bg-white flex hover:scale-105 hover:shadow-xl hover:border-none flex-col justify-center gap-8 shadow-sm rounded-lg p-4 text-center">
+        <div class="w-full h-44">
+          <img src="./assets/Layout/alibaba/Image/cloth/Bitmap (2).png" class="mx-auto w-[80%] h-[80%] mb-3">
+
+        </div>
+        <div>
+        <p class="font-semibold">$12.50</p>
+        <p class="text-sm text-gray-500">Denim Short</p>
+        </div>      
+      </div>
+
+      <div class="bg-white flex hover:scale-105 hover:shadow-xl hover:border-none flex-col justify-center gap-8 shadow-sm rounded-lg p-4 text-center">
+        <div class="w-full h-44">
+          <img src="./assets/Layout/alibaba/Image/cloth/Bitmap.png" class="mx-auto w-[80%] h-[80%] mb-3">
+
+        </div>
+        <div>
+        <p class="font-semibold">$34.00</p>
+        <p class="text-sm text-gray-500">T-shirt</p>
+        </div>      
+      </div>
+
+      <div class="bg-white justify-center hover:scale-105 hover:shadow-xl hover:border-none flex flex-col gap-8 shadow-sm rounded-lg p-4 text-center">
+        <div class="w-full h-44">
+          <img src="./assets/Layout/alibaba/Image/cloth/image 24.png" class="mx-auto w-[80%] h-[80%] mb-3">
+
+        </div>
+        <div>
+        <p class="font-semibold">$9.99</p>
+        <p class="text-sm text-gray-500">Wallet</p>
+        </div>      
+      </div>
+
+      <div class="bg-white flex hover:scale-105 hover:shadow-xl hover:border-none justify-center flex-col gap-8 shadow-sm rounded-lg p-4 text-center">
+        <div class="w-full h-44">
+          <img src="./assets/Layout/alibaba/Image/cloth/image 26.png" class=" mx-auto w-[80%] h-[80%] mb-3">
+
+        </div>
+        <div>
+        <p class="font-semibold">$8.99</p>
+        <p class="text-sm text-gray-500">Denim Bag</p>
+        </div>      
+      </div>
+      <!-- Item -->
+      <div class="bg-white flex hover:scale-105 hover:shadow-xl hover:border-none justify-center flex-col gap-8 shadow-sm rounded-lg p-4 text-center">
+        <div class="w-full h-44">
+          <img src="./assets/Layout/alibaba/Image/cloth/2 1.png" class="mx-auto w-[80%] h-[80%] mb-3">
+
+        </div>
+        <div>
+          <p class="font-semibold">$10.30</p>
+          <p class="text-sm text-gray-500">Brown Leather Jacket</p>
+        </div>
+      </div>
+
+      <div class="bg-white flex hover:scale-105 hover:shadow-xl hover:border-none flex-col justify-center gap-8 shadow-sm rounded-lg p-4 text-center">
+        <div class="w-full h-44">
+          <img src="./assets/Layout/alibaba/Image/cloth/Bitmap (2).png" class="mx-auto w-[80%] h-[80%] mb-3">
+
+        </div>
+        <div>
+        <p class="font-semibold">$12.50</p>
+        <p class="text-sm text-gray-500">Denim Short</p>
+        </div>      
+      </div>
+
+      <div class="bg-white flex hover:scale-105 hover:shadow-xl hover:border-none flex-col justify-center gap-8 shadow-sm rounded-lg p-4 text-center">
+        <div class="w-full h-44">
+          <img src="./assets/Layout/alibaba/Image/cloth/Bitmap.png" class="mx-auto w-[80%] h-[80%] mb-3">
+
+        </div>
+        <div>
+        <p class="font-semibold">$34.00</p>
+        <p class="text-sm text-gray-500">T-shirt</p>
+        </div>      
+      </div>
+
+      <div class="bg-white justify-center flex flex-col gap-8 hover:scale-105 hover:shadow-xl hover:border-none shadow-sm rounded-lg p-4 text-center">
+        <div class="w-full h-44">
+          <img src="./assets/Layout/alibaba/Image/cloth/image 24.png" class="mx-auto w-[80%] h-[80%] mb-3">
+
+        </div>
+        <div>
+        <p class="font-semibold">$9.99</p>
+        <p class="text-sm text-gray-500">Wallet</p>
+        </div>      
+      </div>
+
+      <div class="bg-white hover:scale-105 hover:shadow-xl hover:border-none flex justify-center flex-col gap-8 shadow-sm rounded-lg p-4 text-center">
+        <div class="w-full h-44">
+          <img src="./assets/Layout/alibaba/Image/cloth/image 26.png" class=" mx-auto w-[80%] h-[80%] mb-3">
+
+        </div>
+        <div>
+        <p class="font-semibold">$8.99</p>
+        <p class="text-sm text-gray-500">Denim Bag</p>
+        </div>      
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra Services -->
+  <section class="w-full px-4 sm:px-16 mt-10">
+    <h2 class="text-lg font-semibold mb-4">Our extra services</h2>
+
+    <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-4">
+      <div class="relative rounded-lg overflow-hidden">
+                <div class="absolute inset-0 bg-black opacity-30"></div>
+        <img src="./assets/Image/backgrounds/image 106.png"
+             class="h-64 w-full object-cover">
+        <div class="absolute bottom-0 bg-white p-3 w-full text-sm font-medium">
+          <div class="w-full flex justify-between p-4">
+            <span class="font-medium text-sm">
+  Fast, reliable shipping            </span>
+
+            <div class="w-14 h-14 flex justify-center items-center relative bottom-14 rounded-full bg-blue-200 border-3 border-white">
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="relative rounded-lg overflow-hidden">
+                <div class="absolute inset-0 bg-black opacity-30"></div>
+        <img src="./assets/Image/backgrounds/image 107.png"
+             class="h-64 w-full object-cover">
+        <div class="absolute bottom-0 bg-white p-3 w-full text-sm font-medium">
+          <div class="w-full flex justify-between p-4">
+            <span class="font-medium text-sm">
+      
+               Product monitoring
+            </span>
+
+            <div class="w-14 h-14 relative bottom-14 rounded-full flex justify-center items-center bg-blue-200 border-3 border-white">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="relative rounded-lg overflow-hidden">
+                <div class="absolute inset-0 bg-black opacity-30"></div>
+        <img src="./assets/Image/backgrounds/Mask group (1).png"
+             class="h-64 w-full object-cover">
+        <div class="absolute bottom-0 bg-white p-3 w-full text-sm font-medium">
+          <div class="w-full flex justify-between p-4">
+            <span class="font-medium text-sm">
+            
+               Customize Your Products
+            </span>
+
+            <div class="w-14 h-14 relative bottom-14 flex justify-center items-center  rounded-full bg-blue-200 border-3 border-white">
+              <i class="fa-brands fa-intercom"></i>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="relative rounded-lg overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <img src="./assets/Image/backgrounds/Mask group.png"
+          class="h-64 w-full object-cover">
+        <div class="absolute bottom-0 bg-white p-3 w-full text-sm font-medium">
+          <div class="w-full flex justify-between p-4">
+            <span class="font-medium text-sm">
+             
+              Source from Industry Hubs
+            </span>
+
+            <div class="w-14 h-14 relative bottom-14 rounded-full flex justify-center items-center bg-blue-200 border-3 border-white">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Suppliers by Region -->
+  <section class="w-full px-4 sm:px-16 mt-10">
+    <h2 class="text-lg font-semibold mb-4">Suppliers by region</h2>
+
+    <div class="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2   gap-4 text-sm">
+      <div class="bg-white p-3 rounded border flex justify-between">
+        <img src="./assets/Layout1/Image/flags/AE@2x.png" class="w-8 h-6" alt="">
+        <span class="text-base">
+Arab Emirates
+        </span>
+         </div>
+      <div class="bg-white p-3 rounded border flex justify-between">
+        <img src="./assets/Layout1/Image/flags/CN@2x.png" class="w-8 h-6" alt="">
+        <span class="text-lg">
+Australia
+        </span>
+         </div>
+      <div class="bg-white p-3 rounded border flex justify-between">
+        <img src="./assets/Layout1/Image/flags/DE@2x.png" class="w-8 h-6" alt="">
+        <span class="text-base">
+ Germany
+        </span>
+        </div>
+      <div class="bg-white p-3 rounded border flex justify-between">
+        <img src="./assets/Layout1/Image/flags/DK@2x.png" class="w-8 h-6" alt="">
+        <span class="text-lg">
+Denmark
+        </span>
+         </div>
+      <div class="bg-white p-3 rounded border flex justify-between">
+        <img src="./assets/Layout1/Image/flags/FR@2x.png" class="w-8 h-6" alt="">
+        <span class="text-lg">
+France
+        </span>
+         </div>
+ 
+      <div class="bg-white p-3  rounded border flex justify-between">
+        <img src="./assets/Layout1/Image/flags/GB@2x.png" class="w-8 h-6" alt="">
+        <span class="text-base">
+  England
+        </span>
+      </div>
+      <div class="bg-white p-3 rounded border flex justify-between">
+        <img src="./assets/Layout1/Image/flags/icon.png" class="w-8 h-6" alt="">
+        <span class="text-lg">
+Australia
+        </span>
+         </div>
+      <div class="bg-white p-3 rounded border flex justify-between">
+        <img src="./assets/Layout1/Image/flags/IT@2x.png" class="w-8 h-6" alt="">
+        <span class="text-lg">
+Italy
+        </span>
+        </div>
+      <div class="bg-white p-3 rounded border flex justify-between">
+        <img src="./assets/Layout1/Image/flags/RU@2x.png" class="w-8 h-6" alt="">
+        <span class="text-lg">
+Russia
+        </span>
+         </div>
+      <div class="bg-white p-3 rounded border flex justify-between">
+        <img src="./assets/Layout1/Image/flags/US@2x.png" class="w-8 h-6" alt="">
+        <span class="text-lg">
+United States
+        </span>
+         </div>
+    </div>
+  </section>
+
+
+
+<!-- Newsletter -->
+<div class="bg-gray-100 py-10 mt-10">
+  <div class="max-w-xl mx-auto text-center">
+    <h2 class="font-semibold text-2xl mb-2">Subscribe on our newsletter</h2>
+    <p class="text-base text-gray-600 mb-4">
+      Get daily news on upcoming offers
+    </p>
+
+    <div class="flex sm:flex-row flex-col items-center px-12 justify-center gap-2">
+      <input type="email" placeholder="Email"
+             class="px-4 py-2 rounded border w-full sm:w-64">
+      <button class="bg-blue-600 w-full sm:w-30   text-white px-4 py-2 rounded">
+        Subscribe
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<!-- FOOTER -->
+<footer class="bg-white shadow">
+
+  <!-- Top Footer -->
+    <div class="w-full  px-6 py-12 grid grid-cols-1  xl:grid-cols-3 gap-8">
+
+      <!-- Brand -->
+      <div class="w-full flex flex-col justify-center items-center">
+        <div class="mb-4">
+          <img src="./assets/Layout/Brand/logo-colored.png" alt="" srcset="">
+        </div>
+
+        <p class="text-gray-500 text-sm mb-4 px-4">
+          Best information about the company goes here but now lorem ipsum is
+        </p>
+
+        <div class="flex gap-3">
+          <span class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center"><i class="fa-brands fa-facebook-f"></i></span>
+          <span class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center"><i class="fa-brands fa-twitter"></i></span>
+          <span class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center"><i class="fa-brands fa-linkedin"></i></span>
+          <span class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center"><i class="fa-brands fa-instagram"></i></span>
+          <span class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center"><i class="fa-brands fa-youtube"></i></span>
+        </div>
+      </div>
+
+     <div class="w-full grid lg:grid-cols-4  justify-center items-center gap-6">
+         <!-- About -->
+      <div>
+        <h3 class="font-semibold mb-4">About</h3>
+        <ul class="space-y-2 text-gray-500 text-sm">
+          <li>About Us</li>
+          <li>Find store</li>
+          <li>Categories</li>
+          <li>Blogs</li>
+        </ul>
+      </div>
+<!-- Partnership -->
+      <div>
+        <h3 class="font-semibold mb-4">Partnership</h3>
+        <ul class="space-y-2 text-gray-500 text-sm">
+          <li>About Us</li>
+          <li>Find store</li>
+          <li>Categories</li>
+          <li>Blogs</li>
+        </ul>
+      </div>
+
+      <!-- Information -->
+      <div>
+        <h3 class="font-semibold mb-4">Information</h3>
+        <ul class="space-y-2 text-gray-500 text-sm">
+          <li>Help Center</li>
+          <li>Money Refund</li>
+          <li>Shipping</li>
+          <li>Contact us</li>
+        </ul>
+      </div>
+
+      <!-- For users -->
+      <div>
+        <h3 class="font-semibold mb-4">For users</h3>
+        <ul class="space-y-2 text-gray-500 text-sm">
+          <li>Login</li>
+          <li>Register</li>
+          <li>Settings</li>
+          <li>My Orders</li>
+        </ul>
+      </div>
+
+      </div>
+      
+      <!-- Get app -->
+      <div class="w-full flex flex-col justify-center items-center">
+        <h3 class="font-semibold text-start  mb-4">Get app</h3>
+        <div class="space-y-3">
+          <img src="./assets/Layout/Misc/Group.png"
+               class="h-10">
+          <img src="./assets/Layout/Misc/market-button.png"
+               class="h-10">
+        </div>
+      </div>
+
+    </div>
+
+
+  <!-- Bottom Footer -->
+  <div class="bg-gray-100 shadow">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500 gap-3">
+      <p>© 2023 Ecommerce.</p>
+
+      <div class="flex items-center gap-2">
+        <img src="./assets/Layout1/Image/flags/AE@2x.png" class="w-6 h-4" alt="" srcset="">
+        <span>Eng</span>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
