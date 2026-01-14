@@ -1,10 +1,14 @@
 const notyf = new Notyf({
   duration: 3000,
   position: {
-    x: 'right',
-    y: 'bottom'
+    x: "right",
+    y: "bottom"
   }
 });
+
+// notyf.success("vhfbh")
+
+
 let homeProductsDiv =document.getElementById("home&Outdoor");
 let consumerProductsDiv =document.getElementById("consumer");
 
