@@ -11,6 +11,20 @@ const notyf = new Notyf({
 
 let homeProductsDiv =document.getElementById("home&Outdoor");
 let consumerProductsDiv =document.getElementById("consumer");
+let gettingCartProducts=JSON.parse(localStorage.getItem("cartProducts"))||[];
+// let gettingDiscountedProducts=JSON.parse(localStorage.getItem("discountedProducts"))||[];
+let cartItems =document.getElementById("cartItems");
+
+if (gettingCartProducts.length>0) {
+    cartItems.classList.add("flex")
+    cartItems.classList.remove("hidden")
+
+    cartItems.innerHTML=` <p class="text-xs font-semibold text-white">${gettingCartProducts.length}</p>`
+}else{
+    cartItems.classList.add("hidden")
+    cartItems.classList.remove("flex") 
+}
+
 
 let inquiryBtn=document.getElementById("inquiryBtn");
 let imageSrc;
@@ -105,50 +119,88 @@ imageSrc: findImage("3")
 let consumerProducts=[
     {
      ProductName:"camera",
-     productPrice:"19",
-     productID:"1",
+     productPrice:"150",
+     productID:"9",
   imageSrc: findImage("9") },
   {
      ProductName:"watch",
-     productPrice:"19",
-     productID:"2",
+     productPrice:"50",
+     productID:"10",
 imageSrc: findImage("10") 
     },
     {
      ProductName:"phone",
-     productPrice:"19",
-     productID:"3",
+     productPrice:"500",
+     productID:"11",
 imageSrc: findImage("11") 
     },
     {
      ProductName:"Headphones",
-     productPrice:"19",
-     productID:"4",
+     productPrice:"20",
+     productID:"12",
    imageSrc: findImage("12") 
     },
     {
      ProductName:"tablet",
-     productPrice:"19",
-     productID:"5",
+     productPrice:"100",
+     productID:"13",
    imageSrc: findImage("13") 
     },
     {
      ProductName:"laptop",
-     productPrice:"19",
-     productID:"6",
+     productPrice:"800",
+     productID:"14",
     imageSrc: findImage("14") 
     },
     {
      ProductName:"Juicer",
-     productPrice:"19",
-     productID:"7",
+     productPrice:"180",
+     productID:"15",
     imageSrc: findImage("15") 
     },
     {
      ProductName:"headphones",
-     productPrice:"19",
-     productID:"8",
+     productPrice:"160",
+     productID:"16",
     imageSrc: findImage("16") 
+    }
+
+
+];
+let discountedProducts=[
+    {
+     ProductName:"camera",
+     productPrice:"150",
+     productID:"9",
+     discount:"9",
+     imageSrc: findImage("9") },
+  {
+     ProductName:"watch",
+     productPrice:"50",
+     productID:"10",
+      discount:"9",
+imageSrc: findImage("10") 
+    },
+    {
+     ProductName:"phone",
+     productPrice:"500",
+     productID:"11",
+      discount:"9",
+imageSrc: findImage("11") 
+    },
+    {
+     ProductName:"Headphones",
+     productPrice:"20",
+     productID:"12",
+      discount:"9",
+   imageSrc: findImage("12") 
+    },
+    {
+     ProductName:"tablet",
+     productPrice:"100",
+     productID:"13",
+      discount:"9",
+   imageSrc: findImage("13") 
     }
 
 
@@ -156,9 +208,14 @@ imageSrc: findImage("11")
 
 localStorage.setItem("homeproducts",JSON.stringify(homeProducts));
 localStorage.setItem("consumerproducts",JSON.stringify(consumerProducts));
+localStorage.setItem("discountedProducts",JSON.stringify(discountedProducts));
 
 let getHomeProducts=JSON.parse(localStorage.getItem("homeproducts"));
 let getConsumerProducts=JSON.parse(localStorage.getItem("consumerproducts"));
+// let gettingCartProducts=JSON.parse(localStorage.getItem("cartProducts"))||[];
+let gettingDiscountedProducts=JSON.parse(localStorage.getItem("discountedProducts"))||[];
+let discountedDiv=document.getElementById("discounted");
+
 
 
 getHomeProducts.forEach(item => {
@@ -183,40 +240,125 @@ getConsumerProducts.forEach(item => {
           </div>`
 });
 
+gettingDiscountedProducts.forEach(item => {
+    discountedDiv.innerHTML+=`<div onclick="savingSelectedDiscountProduct(${item.productID})"  class="flex-1  md:p-0 p-4 hover:shadow-none hover:scale-105 justify-center items-center flex flex-col">
+      <img class="w-20  lg:w-[60%]" src="${item.imageSrc}">
+      <p class="mt-2">${item.ProductName}</p>
+      <span class="text-red-500">-${item.discount} %</span>
+    </div>
+  </div>`
+});
+
 
 
 let savingSelectedHomeProduct=((id)=>{
-  location.href="./showingProducts/index.html";
 
-  getHomeProducts.forEach(item=>{
-    if (item.productID==id){
-        localStorage.removeItem("productToShow");
-        let selectedProduct={ProductName:item.ProductName,Productprice:item.productPrice,Productid:item.productID,Productimage:item.imageSrc};
-        console.log(selectedProduct);
-        
-        localStorage.setItem("productToShow",JSON.stringify(selectedProduct));   
-    }
-  })
+  let checkingRepeatCartProduct=gettingCartProducts.find(item=>item.Productid==id);
+  console.log(checkingRepeatCartProduct);
+  
+
+  if (checkingRepeatCartProduct) {
+    location.href="./showingCartProducts/index.html";
+  }else{
+      location.href="./showingProducts/index.html";
+
+    
+      getHomeProducts.forEach(item=>{
+        if (item.productID==id){
+            localStorage.removeItem("consumerProductToShow");
+            localStorage.removeItem("discountedProductsToShow");
+            let selectedProduct={ProductName:item.ProductName,Productprice:item.productPrice,Productid:item.productID,Productimage:item.imageSrc};
+            console.log(selectedProduct);
+            
+            console.log(selectedProduct);
+            
+            localStorage.setItem("productToShow",JSON.stringify(selectedProduct));   
+        }
+      })
+  }
+
   
 
 })
 let savingSelectedConsumerProduct=((id)=>{
-  location.href="./showingProducts/index.html";
 
-  getConsumerProducts.forEach(item=>{
-    if (item.productID==id){
-        localStorage.removeItem("productToShow");
-        let selectedProduct={ProductName:item.ProductName,Productprice:item.productPrice,Productid:item.productID,Productimage:item.imageSrc};
-        console.log(selectedProduct);
-        
-        localStorage.setItem("consumerProductToShow",JSON.stringify(selectedProduct));
+    let checkingRepeatCartProduct=gettingCartProducts.find(item=>item.Productid==id);
 
-        
-    }
-  })
+  if (checkingRepeatCartProduct) {
+    location.href="./showingCartProducts/index.html";
+    return
+  }else{
+      location.href="./showingProducts/index.html";
+    
+      getConsumerProducts.forEach(item=>{
+        if (item.productID==id){
+            localStorage.removeItem("productToShow");
+            localStorage.removeItem("discountedProductsToShow");
+            let selectedProduct={ProductName:item.ProductName,Productprice:item.productPrice,Productid:item.productID,Productimage:item.imageSrc};
+            console.log(selectedProduct);
+            
+            localStorage.setItem("consumerProductToShow",JSON.stringify(selectedProduct));
+    
+            
+        }
+      })
+  }
   
 
 })
+let savingSelectedDiscountProduct=((id)=>{
+
+    let checkingRepeatCartProduct=gettingCartProducts.find(item=>item.Productid==id);
+
+  if (checkingRepeatCartProduct) {
+    location.href="./showingCartProducts/index.html";
+    return
+  }else{
+      location.href="./showingProducts/index.html";
+    
+      gettingDiscountedProducts.forEach(item=>{
+        if (item.productID==id){
+            localStorage.removeItem("productToShow");
+            localStorage.removeItem("consumerProductToShow");
+            let selectedProduct={ProductName:item.ProductName,Productprice:item.productPrice,Productdiscount:item.discount,Productid:item.productID,Productimage:item.imageSrc};
+            console.log(selectedProduct);
+            
+            localStorage.setItem("consumerProductToShow",JSON.stringify(selectedProduct));
+    
+            
+        }
+      })
+  }
+  
+
+})
+// let savingSelectedDiscountProduct=((id)=>{
+//     console.log(gettingCartProducts, typeof gettingCartProducts);
+
+
+//     let checkingRepeatCartProduct=gettingCartProducts.find(item=>item.Productid==id);
+
+//   if (checkingRepeatCartProduct) {
+//     location.href="./showingCartProducts/index.html";
+//   }else{
+//       location.href="./showingProducts/index.html";
+    
+//       gettingDiscountedProducts.forEach(item=>{
+//         if (item.productID==id){
+//             localStorage.removeItem("productToShow");
+//             localStorage.removeItem("consumerProductToShow");
+//             let selectedProduct={ProductName:item.ProductName,Productprice:item.productPrice,Productid:item.productID,ProductDiscount:item.discount,Productimage:item.imageSrc};
+//             console.log(selectedProduct);
+            
+//             localStorage.setItem("discountedProductsToShow",JSON.stringify(selectedProduct));
+    
+            
+//         }
+//       })
+//   }
+  
+
+// })
 
 
 // inquiry form

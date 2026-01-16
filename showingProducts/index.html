@@ -61,10 +61,13 @@
         <i class="fa-solid text-lg  fa-heart text-gray-500"></i>
         <p class="text-base mt-1  font-thin text-gray-500">Order</p>
     </div>
-    <div class="flex flex-col justify-center items-center">
+     <a href="./showingCartProducts/index.html" class="flex flex-col justify-center items-center">
+      <div id="cartItems" class="w-6 h-6  absolute top-0 right-8 border bg-black hidden justify-center items-center rounded-full">
+       
+      </div>
        <i class="fa-solid text-lg fa-cart-shopping text-gray-500"></i>
         <p class="text-base  mt-1 font-thin text-gray-500">Cart</p>
-    </div>
+    </a>
     </div>
 
     <!-- menu toggle -->
@@ -201,6 +204,10 @@
     </div>
 
 <div  class="flex flex-col gap-4 mt-8">
+  <a href="../index.html" class="w-full flex justify-center items-center border hover:border-none hover:shadow-md py-2 rounded-md hover:bg-blue-600 hover:text-white font-bold">
+    Go back
+  </a>
+
   <button id="buy" class="w-full border hover:border-none hover:shadow-md py-2 rounded-md hover:bg-green-600 hover:text-white font-bold">
     Buy Now
   </button>
@@ -219,7 +226,7 @@
 
 <!-- related products -->
  <div class="max-w-7xl mx-auto mb-20 ">
-   
+   <!-- <img src="" alt="" srcset=""> -->
       <div class="bg-white shadow rounded-lg p-6 space-y-6">
         <div class="border-b flex gap-8 text-sm">
           <button class="pb-3 hover:border-b-2 hover:border-blue-500 hover:text-blue-600 text-black font-medium">

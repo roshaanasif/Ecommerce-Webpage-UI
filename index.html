@@ -12,7 +12,7 @@
 
 </head>
 <body>
-    
+
 <!-- navbar     -->
 <section class="w-full justify-between px-10 items-center flex h-20 shadow-md">
     <div class="w-[20vw] md:w-[10%] lg:w-[10%] flex justify-center items-center bg-white">
@@ -61,10 +61,13 @@
         <i class="fa-solid text-lg  fa-heart text-gray-500"></i>
         <p class="text-base mt-1  font-thin text-gray-500">Order</p>
     </div>
-    <div class="flex flex-col justify-center items-center">
+    <a href="./showingCartProducts/index.html" class="flex flex-col justify-center items-center">
+      <div id="cartItems" class="w-6 h-6  absolute top-0 right-8 border bg-black hidden justify-center items-center rounded-full">
+       
+      </div>
        <i class="fa-solid text-lg fa-cart-shopping text-gray-500"></i>
         <p class="text-base  mt-1 font-thin text-gray-500">Cart</p>
-    </div>
+    </a>
     </div>
 
     <!-- menu toggle -->
@@ -167,33 +170,9 @@
     </div>
   </div>
 
-  <div class="w-full lg:w-[80%] mt-10 lg:mt-0 flex md:flex-row flex-col shadow-sm  text-center">
-    <div  class="flex-1 md:p-0 p-4  justify-center items-center flex flex-col">
-      <img class="w-20  lg:w-[60%]" src="./assets/Image/tech/image 23.png">
-      <p class="mt-2">Mobile Phone</p>
-      <span class="text-red-500">-25%</span>
-    </div>
-    <div class="flex-1  md:p-0 p-4 shadow-sm justify-center items-center flex flex-col">
-      <img class="w-20  lg:w-[60%]" src="./assets/Image/tech/image 29.png">
-      <p class="mt-2">headphones</p>
-      <span class="text-red-500">-15%</span>
-    </div>
-    <div class="flex-1  md:p-0 p-4 shadow-sm justify-center items-center flex flex-col">
-      <img class="w-20  lg:w-[60%]" class="w-32" src="./assets/Image/tech/image 32.png">
-      <p class="mt-2">Tablet</p>
-      <span class="text-red-500">-40%</span>
-    </div>
-    <div class="flex-1  md:p-0 p-4 shadow-sm justify-center items-center flex flex-col">
-      <img class="w-20  lg:w-[60%]" class="w-32" src="./assets/Image/tech/image 33.png">
-      <p class="mt-2">Iphones</p>
-      <span class="text-red-500">-25%</span>
-    </div>
-    <div class="flex-1  md:p-0 p-4 shadow-sm justify-center items-center flex flex-col">
-      <img class="w-20  lg:w-[60%]" src="./assets/Image/tech/image 34.png">
-      <p class="mt-2">laptops</p>
-      <span class="text-red-500">-25%</span>
-    </div>
-  </div>
+  <div id="discounted" class="w-full lg:w-[80%] mt-10 lg:mt-0 flex md:flex-row flex-col shadow-sm  text-center">
+    
+</div>
 </div>
 
 
@@ -211,7 +190,7 @@
       <div class="relative w-[80%]  bottom-35 lg:bottom-52 px-10 flex flex-col justify-start ">
         <h2 class="text-xl font-semibold mb-2">Home and outdoor</h2>
         <button class="w-30 md:w-60  bg-white px-4 py-2 rounded shadow text-sm font-medium">
-          Source now
+          See More
         </button>
       </div>
       
@@ -238,7 +217,7 @@
       <div class="relative w-[80%] bottom-35 lg:bottom-52 px-10 flex flex-col justify-start ">
         <h2 class="text-xl font-semibold mb-2">Consumer electronics and gadgets</h2>
         <button class="w-30 md:w-60  bg-white px-4 py-2 rounded shadow text-sm font-medium">
-          Source now
+          See More
         </button>
       </div>
       
